@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title> Project </title>
+    </head>
+    <body>
+        <button onclick="ascending()"> Ascending Order </button>
+        <button onclick="descending()"> Descending Order </button>
+        <p id="map"></p>
+        <script>
+            var numbers = [96, 64, 127, 3, 78, 46, 109];
+
+            function myFunction(num) {
+                return num * 1/2;
+            }
+            var newarray = numbers.map(myFunction);
+            document.getElementById("map").innerHTML = newarray;
+            function ascending() {
+                numbers.sort(function(a,b){return a - b });
+                document.getElementById("map").innerHTML = numbers;
+            }
+            function descending() {
+                numbers.sort(function(a,b){return b - a});
+                document.getElementById("map").innerHTML = numbers;
+            }
+        </script>
+    </body>
+</html>
